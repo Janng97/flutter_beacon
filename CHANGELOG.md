@@ -1,3 +1,6 @@
+## [0.3.1]
+* Change location to FINE
+
 ## [0.3.0]
 
 * Update Android-Beacon-Library to version [2.16.3](https://github.com/AltBeacon/android-beacon-library/tree/2.16.3)

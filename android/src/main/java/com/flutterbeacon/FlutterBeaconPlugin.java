@@ -260,7 +260,7 @@ public class FlutterBeaconPlugin implements MethodCallHandler,
 
   private void requestAuthorization() {
     ActivityCompat.requestPermissions(registrar.activity(), new String[]{
-        Manifest.permission.ACCESS_COARSE_LOCATION
+        Manifest.permission.ACCESS_FINE_LOCATION
     }, REQUEST_CODE_LOCATION);
   }
 
@@ -268,7 +268,7 @@ public class FlutterBeaconPlugin implements MethodCallHandler,
   private boolean checkLocationServicesPermission() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
       return ContextCompat.checkSelfPermission(registrar.context(),
-          Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+          Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
     return true;
